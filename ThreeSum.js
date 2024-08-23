@@ -1,5 +1,5 @@
 let nums = [-1,0,1,2,-1,-4]
-target = 0
+let target = 0
 
 let k = 0;
 let res = []
@@ -21,6 +21,9 @@ while(k < nums.length - 2){
     }else{
       res.push([nums[k], nums[i], nums[j]])
       i += 1;
+      while(nums[i-1] === nums[i]) i++;
+      j -= 1;
+      while(nums[j+1] === nums[j]) j--;
     }
   }
   k++;
