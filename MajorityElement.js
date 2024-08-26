@@ -15,6 +15,5 @@ for(let i = 0; i< nums.length; i++){
       count += 1
     }
   }
-  
 }
 console.log(currentElement)
