@@ -7,8 +7,8 @@ function move(m, n, memo = {}){
   let key = m + ',' + n
   if(key in memo) return memo[key]
 
-  memo[key] = move(m -1, n) + move(m, n-1);
+  memo[key] = move(m -1, n, memo) + move(m, n-1, memo);
   return memo[key]
 }
 
-console.log(move(3, 3))
+console.log(move(10, 10))
